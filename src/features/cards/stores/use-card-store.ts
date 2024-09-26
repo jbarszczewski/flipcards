@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { persist, PersistOptions } from "zustand/middleware";
+import { persist } from "zustand/middleware";
 import { Card } from "../types";
 
 interface CardState {
@@ -9,11 +9,7 @@ interface CardState {
   updateCard: (updatedCard: Card) => void;
 }
 
-const persistOptions: PersistOptions<CardState> = {
-  name: "card-storage",
-};
-
-export const useCardStore = create<CardState>(
+export const useCardStore = create<CardState>()(
   persist(
     (set) => ({
       cards: [],
@@ -29,6 +25,6 @@ export const useCardStore = create<CardState>(
           ),
         })),
     }),
-    persistOptions
+    { name: "card-storage" }
   )
 );
