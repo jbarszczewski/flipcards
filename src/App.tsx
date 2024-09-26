@@ -1,4 +1,4 @@
-import Header from "./components/Header";
+import Header from "./components/header";
 import AddCard from "./features/cards/components/add-card";
 import CardsList from "./features/cards/components/cards-list";
 
@@ -6,7 +6,7 @@ const App = () => {
   return (
     <>
       <div>
-        {/* <Header /> */}
+        <Header />
         <AddCard />
         <CardsList />
       </div>
