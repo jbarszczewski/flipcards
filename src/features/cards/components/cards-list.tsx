@@ -18,8 +18,7 @@ const CardsList: React.FC = () => {
                 className="btn btn-secondary"
                 onClick={() =>
                   updateCard({ ...card, isLearned: !card.isLearned })
-                }
-              >
+                }>
                 {card.isLearned ? (
                   <FontAwesomeIcon icon={faCheckCircle} />
                 ) : (
@@ -28,8 +27,7 @@ const CardsList: React.FC = () => {
               </button>
               <button
                 className="btn btn-ghost"
-                onClick={() => removeCard(card.id)}
-              >
+                onClick={() => removeCard(card.id)}>
                 Remove
               </button>
             </div>

@@ -13,8 +13,7 @@ const AddCard: React.FC = () => {
             frontText: "New Card",
             backText: "Back text",
           })
-        }
-      >
+        }>
         Add Card
       </button>
     </div>
