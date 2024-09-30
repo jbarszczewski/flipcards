@@ -1,12 +1,12 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { Card } from "../types";
+import { Flipcard } from "../types";
 
 interface CardState {
-  cards: Card[];
-  addCard: (card: Card) => void;
+  cards: Flipcard[];
+  addCard: (card: Flipcard) => void;
   removeCard: (cardId: string) => void;
-  updateCard: (updatedCard: Card) => void;
+  updateCard: (updatedCard: Flipcard) => void;
 }
 
 export const useCardStore = create<CardState>()(
