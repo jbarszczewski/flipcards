@@ -22,13 +22,13 @@ const Header = () => {
       <div className="flex-none">
         <ul className="menu menu-horizontal p-0">
           <li>
-            <Link to="/">List</Link>
+            <Link to="/flipcards">List</Link>
           </li>
           <li>
-            <Link to="/cards/random">Random</Link>
+            <Link to="/flipcards/cards/random">Random</Link>
           </li>
           <li>
-            <Link to="/cards/add">Add</Link>
+            <Link to="/flipcards/cards/add">Add</Link>
           </li>
         </ul>
       </div>

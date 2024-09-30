@@ -6,9 +6,9 @@ import AddCardRoute from "./routes/add-card";
 export const AppRoutes = () => {
   return (
     <Switch>
-      <Route path="/" component={HomeRoute} />
-      <Route path="/cards/random" component={RandomCardRoute} />
-      <Route path="/cards/add" component={AddCardRoute} />
+      <Route path="/flipcards" component={HomeRoute} />
+      <Route path="/flipcards/cards/random" component={RandomCardRoute} />
+      <Route path="/flipcards/cards/add" component={AddCardRoute} />
       <Route>404: No such page!</Route>
     </Switch>
   );
