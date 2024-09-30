@@ -8,7 +8,7 @@ const CardsList: React.FC = () => {
   return (
     <div>
       {cards.map((card) => (
-        <div className="card w-96 bg-base-100 shadow-xl mb-4">
+        <div className="card w-96 bg-base-100 shadow-xl mb-4" key={card.id}>
           <div className="card-body">
             <h2 className="card-title">{card.frontText}</h2>
             <p>{card.backText}</p>

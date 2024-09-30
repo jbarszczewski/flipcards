@@ -21,10 +21,10 @@ export const useCardStore = create<CardState>()(
       updateCard: (updatedCard) =>
         set((state) => ({
           cards: state.cards.map((card) =>
-            card.id === updatedCard.id ? updatedCard : card
+            card.id === updatedCard.id ? updatedCard : card,
           ),
         })),
     }),
-    { name: "card-storage" }
-  )
+    { name: "card-storage" },
+  ),
 );

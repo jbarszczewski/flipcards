@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "wouter";
 
 const Header = () => {
   return (
@@ -25,7 +25,10 @@ const Header = () => {
             <Link to="/">List</Link>
           </li>
           <li>
-            <Link to="/random">Random</Link>
+            <Link to="/cards/random">Random</Link>
+          </li>
+          <li>
+            <Link to="/cards/add">Add</Link>
           </li>
         </ul>
       </div>
