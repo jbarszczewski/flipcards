@@ -30,6 +30,9 @@ const Header = () => {
           <li>
             <Link to="/flipcards/cards/add">Add</Link>
           </li>
+          <li>
+            <Link to="/flipcards/cards/sync">Sync</Link>
+          </li>
         </ul>
       </div>
     </div>

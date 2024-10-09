@@ -9,7 +9,12 @@ const RandomCardRoute = () => {
   const [card, setCard] = useState<Flipcard>();
 
   const handleGetRandomCard = () => {
-    setCard(cards[Math.floor(Math.random() * cards.length)]);
+    const newCard = cards[Math.floor(Math.random() * cards.length)];
+    if (newCard !== card) {
+      setCard(newCard);
+    } else {
+      handleGetRandomCard();
+    }
   };
 
   return (
