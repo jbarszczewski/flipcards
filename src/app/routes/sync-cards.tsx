@@ -4,7 +4,7 @@ import { useCardStore } from "../../features/cards/stores/use-card-store";
 
 const SyncCardsRoute = () => {
   const inputRef = useRef<HTMLInputElement>(null);
-  const { importCardsFromCSV } = useCardStore();
+  const { importCardsFromCSV, exportCardsToCSV } = useCardStore();
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -15,18 +15,23 @@ const SyncCardsRoute = () => {
 
   return (
     <MainLayout>
-      <h1 className="text-3xl font-bold mb-4">Import Cards</h1>
-      <input
-        type="file"
-        ref={inputRef}
-        onChange={handleFileChange}
-        className="hidden"
-      />
-      <button
-        className="btn btn-primary"
-        onClick={() => inputRef.current?.click()}>
-        Import Cards
-      </button>
+      <div className="flex flex-col gap-4">
+        <h1 className="text-3xl font-bold">Sync Cards</h1>
+        <input
+          type="file"
+          ref={inputRef}
+          onChange={handleFileChange}
+          className="hidden"
+        />
+        <button
+          className="btn btn-primary"
+          onClick={() => inputRef.current?.click()}>
+          Import Cards
+        </button>
+        <button className="btn btn-primary" onClick={() => exportCardsToCSV()}>
+          Export Cards
+        </button>
+      </div>
     </MainLayout>
   );
 };

@@ -4,8 +4,10 @@ import CardsList from "../../features/cards/components/cards-list";
 const HomeRoute = () => {
   return (
     <MainLayout>
-      <h1>Home</h1>
-      <CardsList />
+      <div className="flex flex-col gap-4">
+        <h1 className="text-3xl font-bold">Home</h1>
+        <CardsList />
+      </div>
     </MainLayout>
   );
 };

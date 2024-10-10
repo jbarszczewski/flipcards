@@ -19,13 +19,15 @@ const RandomCardRoute = () => {
 
   return (
     <MainLayout>
-      <h1>Random Card</h1>
-      <button className="btn btn-primary" onClick={handleGetRandomCard}>
-        Get Random Card
-      </button>
-      {card && (
-        <Card card={card} updateCard={updateCard} removeCard={removeCard} />
-      )}
+      <div className="flex flex-col gap-4">
+        <h1 className="text-3xl font-bold">Random Card</h1>
+        <button className="btn btn-primary" onClick={handleGetRandomCard}>
+          Get Random Card
+        </button>
+        {card && (
+          <Card card={card} updateCard={updateCard} removeCard={removeCard} />
+        )}
+      </div>
     </MainLayout>
   );
 };

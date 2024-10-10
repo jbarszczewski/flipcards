@@ -4,8 +4,10 @@ import AddCard from "../../features/cards/components/add-card";
 const AddCardRoute = () => {
   return (
     <MainLayout>
-      <h1>Add Card</h1>
-      <AddCard />
+      <div className="flex flex-col gap-4">
+        <h1 className="text-3xl font-bold">Add Card</h1>
+        <AddCard />
+      </div>
     </MainLayout>
   );
 };
