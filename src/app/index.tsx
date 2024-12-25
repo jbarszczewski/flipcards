@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { AppRoutes } from "./router.tsx";
 
 const App = () => {
